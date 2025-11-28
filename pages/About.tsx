@@ -75,14 +75,14 @@ const About: React.FC = () => {
           />
           {/* CFO */}
           <TeamMember
-            image="https://images.unsplash.com/photo-1522069394066-326005dc99c2?q=80&w=400&h=400&fit=crop"
+            image="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?q=80&w=400&h=400&fit=crop"
             name="R.N.G."
             role="Chief Financial Officer"
             bio="A pair of dice. We roll them to decide salaries and budget. If it's snake eyes, nobody gets paid."
           />
           {/* HR */}
           <TeamMember
-            image="https://images.unsplash.com/photo-1627447879486-0775d72f12f2?q=80&w=400&h=400&fit=crop"
+            image="https://images.unsplash.com/photo-1725378048990-1fb4795d9a46?q=80&w=400&h=400&fit=crop"
             name="The 8-Ball"
             role="Head of HR"
             bio="Handles all complaints. Most common response to 'Can I have a raise?': 'Outlook not so good'."
@@ -191,7 +191,7 @@ const About: React.FC = () => {
       </section>
 
       <div className="mt-24 text-center">
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-300 text-sm">
           * No animals were harmed in the making of this website, although the rock did get dropped
           once.
         </p>
@@ -242,34 +242,20 @@ const RoadmapItem: React.FC<{
   title: string;
   desc: string;
   status: "done" | "current" | "future";
-}> = ({ year, title, desc, status }) => {
-  let dotClass = "bg-neutral-700";
-  let textClass = "text-gray-500";
-
-  if (status === "done") {
-    dotClass = "bg-indigo-500";
-    textClass = "text-gray-300";
-  } else if (status === "current") {
-    dotClass = "bg-white animate-pulse shadow-[0_0_10px_rgba(255,255,255,0.5)]";
-    textClass = "text-white";
-  }
+}> = ({ year, title, desc }) => {
+  const dotClass = "bg-indigo-500";
+  const textClass = "text-gray-300";
 
   return (
-    <div className="relative pl-8 md:pl-0">
+    <div className="relative pl-10">
       {/* Dot */}
       <div
-        className={`absolute left-[-5px] top-2 h-3 w-3 rounded-full ${dotClass} border border-neutral-950 z-10`}
+        className={`absolute left-[-7px] top-2 h-3 w-3 rounded-full ${dotClass} border border-neutral-950 z-10`}
       ></div>
 
       <div className="md:flex md:gap-8 md:items-baseline">
         <div className="md:w-32 flex-shrink-0">
-          <span
-            className={`text-sm font-mono font-bold ${
-              status === "current" ? "text-indigo-400" : "text-gray-600"
-            }`}
-          >
-            {year}
-          </span>
+          <span className="text-sm font-mono font-bold text-gray-500">{year}</span>
         </div>
         <div>
           <h3 className={`text-xl font-bold mb-2 ${textClass}`}>{title}</h3>
