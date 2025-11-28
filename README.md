@@ -1,5 +1,7 @@
 # A1 Agent – Anti-Productivity Landing Page
 
+![A1 Agent preview](public/image.png)
+
 A1 Agent is a tongue-in-cheek marketing site for a fictional AI company that proudly sprints away from real artificial intelligence. The single-page-feel app is built with modern React and packed with ridiculous copy, animated timelines, and fake HR policies to keep the joke flowing from hero to footer.
 
 ## Features
