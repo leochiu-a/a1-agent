@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { Bot, Menu, X, Skull, ExternalLink } from "lucide-react";
-import { useState } from "react";
 
 const Layout: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [location.pathname]);
 
   const navLinks = [
     { name: "Products", path: "/products" },
