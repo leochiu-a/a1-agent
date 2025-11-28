@@ -11,6 +11,10 @@ const Layout: React.FC = () => {
     { name: "Products", path: "/products" },
     { name: "Pricing", path: "/pricing" },
     { name: "About Us", path: "/about" },
+    {
+      name: "GitHub",
+      path: "https://github.com/leochiu-a/a1-agent",
+    },
     { name: "Login", path: "/login", highlight: true },
   ];
 
@@ -26,7 +30,10 @@ const Layout: React.FC = () => {
                   <Bot className="h-6 w-6 text-white" />
                 </div>
                 <span className="font-bold text-xl tracking-tighter">
-                  A1 <span className="text-neutral-500 font-normal text-sm">agent</span>
+                  A1{" "}
+                  <span className="text-neutral-500 font-normal text-sm">
+                    agent
+                  </span>
                 </span>
               </Link>
             </div>
@@ -56,7 +63,11 @@ const Layout: React.FC = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-neutral-800 focus:outline-none"
               >
-                {isMenuOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+                {isMenuOpen ? (
+                  <X className="block h-6 w-6" />
+                ) : (
+                  <Menu className="block h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -96,14 +107,18 @@ const Layout: React.FC = () => {
                 System Failure
               </h3>
               <p className="text-gray-400 text-sm">
-                Something went wrong while rendering this footer column. Please try ignoring it.
+                Something went wrong while rendering this footer column. Please
+                try ignoring it.
               </p>
             </div>
             <div className="text-center md:text-left">
               <h3 className="text-lg font-bold mb-4">Useless Links</h3>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link to="/products" className="hover:text-white hover:underline decoration-wavy">
+                  <Link
+                    to="/products"
+                    className="hover:text-white hover:underline decoration-wavy"
+                  >
                     Non-existent Products
                   </Link>
                 </li>
@@ -129,15 +144,16 @@ const Layout: React.FC = () => {
             <div className="text-center md:text-right">
               <h3 className="text-lg font-bold mb-4">Don't Contact Us</h3>
               <p className="text-gray-400 text-sm">
-                We process all emails by immediately deleting them to ensure zero response time
-                latency.
+                We process all emails by immediately deleting them to ensure
+                zero response time latency.
               </p>
             </div>
           </div>
 
           <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm text-center">
-              &copy; 2025 A1 is not AI. All rights reserved. But we are not sure what rights.
+              &copy; 2025 A1 is not AI. All rights reserved. But we are not sure
+              what rights.
             </p>
             <div className="flex space-x-6 text-sm text-gray-500">
               <Link
